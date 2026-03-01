@@ -88,7 +88,7 @@ export default function Contact() {
                     <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
                         Contactez-<span className="text-[#4468b8]">Moi</span>
                     </h1>
-                    <p className="text-[#8a9fc4] max-w-2xl mx-auto text-lg leading-relaxed">
+                    <p className="text-[#cbd5e1] max-w-2xl mx-auto text-lg leading-relaxed">
                         Un projet en tête, une opportunité ou simplement envie de discuter ? N'hésitez pas à m'envoyer un message.
                     </p>
                 </motion.div>
@@ -113,7 +113,7 @@ export default function Contact() {
                                     <div className="relative z-10">{info.icon}</div>
                                 </div>
                                 <div>
-                                    <h3 className="text-sm uppercase tracking-widest text-[#8a9fc4] font-medium mb-1 group-hover:text-white transition-colors">{info.title}</h3>
+                                    <h3 className="text-sm uppercase tracking-widest text-[#cbd5e1] font-medium mb-1 group-hover:text-white transition-colors">{info.title}</h3>
                                     <p className="text-[#dfd7c1] font-medium text-lg">{info.value}</p>
                                 </div>
                             </motion.a>
@@ -121,7 +121,7 @@ export default function Contact() {
 
                         {/* Social Links */}
                         <div className="mt-8 p-6 rounded-2xl bg-[#111111] border border-white/5">
-                            <h3 className="text-sm uppercase tracking-widest text-[#8a9fc4] font-medium mb-6">Réseaux Sociaux</h3>
+                            <h3 className="text-sm uppercase tracking-widest text-[#cbd5e1] font-medium mb-6">Réseaux Sociaux</h3>
                             <div className="flex gap-4">
                                 {[
                                     { icon: "github", label: "GitHub", link: "https://github.com/Harding10" },
@@ -156,7 +156,7 @@ export default function Contact() {
                         <form onSubmit={handleSubmit} className="relative z-10 flex flex-col gap-6">
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
-                                    <label htmlFor="name" className="text-sm font-medium text-[#8a9fc4]">Nom complet</label>
+                                    <label htmlFor="name" className="text-sm font-medium text-[#cbd5e1]">Nom complet</label>
                                     <input
                                         type="text"
                                         id="name"
@@ -169,7 +169,7 @@ export default function Contact() {
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <label htmlFor="email" className="text-sm font-medium text-[#8a9fc4]">Adresse Email</label>
+                                    <label htmlFor="email" className="text-sm font-medium text-[#cbd5e1]">Adresse Email</label>
                                     <input
                                         type="email"
                                         id="email"
@@ -184,7 +184,7 @@ export default function Contact() {
                             </div>
 
                             <div className="space-y-2">
-                                <label htmlFor="subject" className="text-sm font-medium text-[#8a9fc4]">Sujet</label>
+                                <label htmlFor="subject" className="text-sm font-medium text-[#cbd5e1]">Sujet</label>
                                 <input
                                     type="text"
                                     id="subject"
@@ -198,7 +198,7 @@ export default function Contact() {
                             </div>
 
                             <div className="space-y-2">
-                                <label htmlFor="message" className="text-sm font-medium text-[#8a9fc4]">Message</label>
+                                <label htmlFor="message" className="text-sm font-medium text-[#cbd5e1]">Message</label>
                                 <textarea
                                     id="message"
                                     name="message"

@@ -18,7 +18,7 @@ export default function About() {
                         Transformer la complexité en <span className="text-[#4468b8]">solutions élégantes</span>.
                     </h3>
 
-                    <div className="space-y-6 text-[#8a9fc4] text-lg leading-relaxed font-light">
+                    <div className="space-y-6 text-[#cbd5e1] text-lg leading-relaxed font-light">
                         <p>
                             Étudiant en deuxième année de <span className="text-white font-medium text-lg">Licence Génie Informatique</span> à l'Institut Universitaire d'Abidjan (IUA), je me positionne à l'intersection du logiciel et du matériel.
                         </p>
@@ -38,7 +38,7 @@ export default function About() {
                             <span className="w-2 h-2 bg-[#4468b8] rounded-full"></span>
                             Formation actuelle
                         </h4>
-                        <p className="text-[#8a9fc4] text-sm leading-relaxed italic">
+                        <p className="text-[#cbd5e1] text-sm leading-relaxed italic">
                             L2 Génie Informatique - IUA (Abidjan)
                         </p>
                     </div>
@@ -50,7 +50,7 @@ export default function About() {
                         </h4>
                         <ul className="grid grid-cols-2 gap-3">
                             {['Full-stack Dev', 'Data Analysis', 'IoT Systems', 'Intelligence Artificielle'].map((item) => (
-                                <li key={item} className="text-[#8a9fc4] text-xs font-mono bg-black/40 p-2 rounded border border-white/5">
+                                <li key={item} className="text-[#cbd5e1] text-xs font-mono bg-black/40 p-2 rounded border border-white/5">
                                     {item}
                                 </li>
                             ))}

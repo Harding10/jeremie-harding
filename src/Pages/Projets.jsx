@@ -39,7 +39,7 @@ export default function Projet() {
                             className={`px-6 py-2 rounded-full text-[10px] font-black tracking-widest uppercase transition-all duration-300 border ${
                                 activeTab === tab 
                                 ? "bg-[#4468b8] border-[#4468b8] text-white" 
-                                : "border-white/10 text-[#8a9fc4] hover:border-[#dfd7c1] hover:text-[#dfd7c1]"
+                                : "border-white/10 text-[#cbd5e1] hover:border-[#dfd7c1] hover:text-[#dfd7c1]"
                             }`}
                         >
                             {tab.replace('_', ' ')} <span className="ml-2 opacity-50">[{getCount(tab)}]</span>

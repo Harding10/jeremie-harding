@@ -21,8 +21,8 @@ export default function Certifications() {
         <h3 className="text-4xl md:text-6xl font-black text-white tracking-tighter uppercase relative">
           Mes <span className="text-transparent" style={{ WebkitTextStroke: '2px #4468b8' }}>Certificats</span>
         </h3>
-        <p className="max-w-2xl text-[#8a9fc4] font-light text-sm md:text-base mt-2">
-          Découvrez la collection de mes attestations, reflétant mon engagement dans une veille technologique constante. Cliquez sur une carte pour la déployer.
+        <p className="max-w-2xl text-[#cbd5e1] font-light text-sm md:text-base mt-2">
+          Découvrez la collection de mes attestations, reflétat mon engagement dans une veille technologique constante. Cliquez sur une carte pour la déployer.
         </p>
       </div>
 

@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback, Suspense } from 'react'
 import { Link } from 'react-router-dom'
 import logoHarding from '../../assets/logo.jpg'
 import { DotLottieReact } from '@lottiefiles/dotlottie-react'
@@ -73,11 +73,14 @@ export default function Navbar() {
                     >
                         <span>CV</span>
                         <div className="w-6 h-6 flex items-center justify-center">
-                            <DotLottieReact
-                                data={cvAnimation}
-                                loop={false}
-                                dotLottieRef={dotLottieRefCallback}
-                            />
+                            {/* On charge le player Lottie seulement après le montage initial pour ne pas bloquer le LCP */}
+                            <Suspense fallback={<div className="w-6 h-6 bg-gray-200 rounded-full animate-pulse" />}>
+                                <DotLottieReact
+                                    data={cvAnimation}
+                                    loop={false}
+                                    dotLottieRef={dotLottieRefCallback}
+                                />
+                            </Suspense>
                         </div>
                     </button>
                 </nav>

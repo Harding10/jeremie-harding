@@ -34,7 +34,7 @@ export default function ProjectCard({ project }) {
             <div className="relative p-6 pt-4 bg-gradient-to-b from-transparent to-[#0a0a0a]">
                 <div className="mb-4">
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[#4468b8] transition-colors">{project.title}</h3>
-                    <p className="text-sm font-light text-[#8a9fc4] line-clamp-2 leading-relaxed">{project.description}</p>
+                    <p className="text-sm font-light text-[#cbd5e1] line-clamp-2 leading-relaxed">{project.description}</p>
                 </div>
 
                 {/* Tags */}

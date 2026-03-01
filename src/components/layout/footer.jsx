@@ -12,7 +12,7 @@ function Footer() {
                     <h2 className="text-white text-4xl sm:text-6xl md:text-8xl lg:text-[7rem] font-black tracking-tighter leading-[1.1] md:leading-none uppercase">
                         Construisons <br /> <span className="stroke-text-footer italic">L'Avenir.</span>
                     </h2>
-                    <p className="text-[#8a9fc4] text-xs sm:text-sm md:text-xl font-light tracking-[0.2em] md:tracking-[0.4em] max-w-2xl mx-auto uppercase mt-6">
+                    <p className="text-[#cbd5e1] text-xs sm:text-sm md:text-xl font-light tracking-[0.2em] md:tracking-[0.4em] max-w-2xl mx-auto uppercase mt-6">
                         Transformer l'imagination en <span className="text-[#4468b8] font-bold">réalité connectée</span>.
                     </p>
                 </div>
@@ -32,7 +32,7 @@ function Footer() {
                             HARD<span className="text-[#4468b8]">ING</span>
                         </span>
                         <div className="space-y-2">
-                            <p className="text-[#8a9fc4] text-[10px] md:text-[11px] uppercase tracking-widest font-bold">
+                            <p className="text-[#cbd5e1] text-[10px] md:text-[11px] uppercase tracking-widest font-bold">
                                 © {new Date().getFullYear()} Degry Jeremie Harding Beh. Tous droits réservés.
                             </p>
                             <a href="mailto:behdegryjeremieharding@gmail.com" className="block text-[#8d6b5d] text-xs font-mono hover:text-[#dfd7c1] transition-colors">
@@ -42,7 +42,7 @@ function Footer() {
                     </div>
 
                     <div className="flex flex-col md:flex-row gap-8 md:gap-16 w-full md:w-auto items-start md:items-center">
-                        <ul className="flex flex-col md:flex-row gap-6 md:gap-10 text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#8a9fc4]">
+                        <ul className="flex flex-col md:flex-row gap-6 md:gap-10 text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#cbd5e1]">
                             <li className="hover:text-[#dfd7c1] transition-colors cursor-pointer">Home</li>
                             <li className="hover:text-[#dfd7c1] transition-colors cursor-pointer">Projets</li>
                             <li className="hover:text-[#dfd7c1] transition-colors cursor-pointer">Gallery</li>

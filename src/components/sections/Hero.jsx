@@ -55,7 +55,7 @@ export default function Hero() {
                         </div>
                     </div>
 
-                    <p className="max-w-lg text-[#8a9fc4] text-base md:text-xl leading-relaxed font-light mb-10 md:mb-12">
+                    <p className="max-w-lg text-[#cbd5e1] text-base md:text-xl leading-relaxed font-light mb-10 md:mb-12">
                         Fusionner l'électronique et le code pour bâtir des <span className="text-white font-semibold">écosystèmes intelligents</span>.
                     </p>
 

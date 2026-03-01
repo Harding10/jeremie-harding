@@ -95,7 +95,7 @@ export default function Gallery() {
                 <h1 className="text-5xl md:text-7xl font-black text-white tracking-tighter">
                     MES <span className="text-[#4468b8] italic">VIDÉOS</span>
                 </h1>
-                <p className="mt-4 text-[#8a9fc4] max-w-2xl mx-auto font-light leading-relaxed">
+                <p className="mt-4 text-[#cbd5e1] max-w-2xl mx-auto font-light leading-relaxed">
                     Plongez dans mon environnement de travail. Découvrez en vidéo mes sessions de code, des démos d'applications et l'architecture de mes projets.
                 </p>
             </div>
