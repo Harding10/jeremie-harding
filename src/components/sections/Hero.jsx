@@ -79,7 +79,15 @@ export default function Hero() {
                 <div className="lg:col-span-5 relative flex justify-center items-center order-1 lg:order-2 mb-12 lg:mb-0">
                     <div className="relative z-10 w-full max-w-[400px] aspect-[4/5] rounded-[2rem] p-3 bg-gradient-to-br from-[#444056] to-black border border-white/10 shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
                         <div className="w-full h-full rounded-[1.5rem] overflow-hidden">
-                            <img src={hardingImg} alt="Harding" className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" />
+                            <img
+                                src={hardingImg}
+                                alt="Degry Jeremie Harding - Portfolio"
+                                fetchpriority="high"
+                                loading="eager"
+                                width="864"
+                                height="1097"
+                                className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
+                            />
                         </div>
                         <div className="absolute -bottom-6 -left-6 p-6 bg-[#dfd7c1] rounded-2xl shadow-xl hidden md:block animate-bounce-slow">
                             <div className="flex items-center gap-3">
@@ -124,9 +132,9 @@ export default function Hero() {
                 .shooting-star:nth-child(12) { top: 5%; left: 80%; animation-delay: 1.8s; }
 
                 @keyframes tail {
-                    0% { width: 0; opacity: 0; }
-                    30% { width: 120px; opacity: 1; }
-                    100% { width: 0; opacity: 0; }
+                    0% { transform: scaleX(0); opacity: 0; }
+                    30% { transform: scaleX(1); opacity: 1; }
+                    100% { transform: scaleX(0); opacity: 0; }
                 }
 
                 @keyframes shooting {

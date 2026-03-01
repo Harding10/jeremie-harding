@@ -51,7 +51,14 @@ const SkillCarousel = ({ title, icons }) => (
                             }}
                         >
                             <div className="w-full h-full bg-[#444056]/40 backdrop-blur-sm border border-white/10 rounded-xl md:rounded-2xl p-3 md:p-4 shadow-[0_0_20px_rgba(0,0,0,0.5)] hover:shadow-[0_0_30px_rgba(68,104,184,0.6)] hover:scale-110 transition-all duration-300">
-                                <img src={icon} alt="skill" className="w-full h-full object-contain drop-shadow-md" />
+                                <img
+                                    src={icon}
+                                    alt={`Icône de compétence - ${icon.split('/').pop().split('-')[0]}`}
+                                    loading="lazy"
+                                    width="95"
+                                    height="95"
+                                    className="w-full h-full object-contain drop-shadow-md"
+                                />
                             </div>
                         </figure>
                     );

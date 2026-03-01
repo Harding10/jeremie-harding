@@ -35,8 +35,8 @@ export default function Navbar() {
                 {/* La barre style "pilule" */}
                 <nav className="flex items-center bg-[#1a1a1acc] backdrop-blur-md rounded-full px-2 py-2 shadow-2xl border border-white/5 relative z-20">
                     {/* Logo */}
-                    <Link to="/" className="bg-black p-2 rounded-full flex items-center justify-center h-10 w-10 ml-1">
-                        <img src={logoHarding} alt="Logo" className="w-6 h-6 object-contain" />
+                    <Link to="/" className="bg-black p-2 rounded-full flex items-center justify-center h-10 w-10 ml-1" aria-label="Retour à l'accueil">
+                        <img src={logoHarding} alt="Logo Degry Jeremie Harding" width="42" height="42" className="w-6 h-6 object-contain" />
                     </Link>
 
                     {/* Liens centraux (Desktop) */}
@@ -54,6 +54,7 @@ export default function Navbar() {
                     <button
                         onClick={toggleMenu}
                         className="flex md:hidden items-center justify-center h-10 w-10 text-white ml-2 mr-2"
+                        aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
                     >
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             {isOpen ? (
@@ -68,6 +69,7 @@ export default function Navbar() {
                     <button
                         onClick={handleCVClick}
                         className="hidden sm:flex items-center gap-2 bg-white text-black px-4 py-1.5 rounded-full text-sm font-bold hover:bg-gray-200 transition-all active:scale-95 mr-1"
+                        aria-label="Télécharger mon Curriculum Vitae"
                     >
                         <span>CV</span>
                         <div className="w-6 h-6 flex items-center justify-center">

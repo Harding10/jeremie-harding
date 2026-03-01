@@ -36,15 +36,18 @@ export default function Certifications() {
               key={cert.id}
               onClick={() => setActiveIndex(idx)}
               className={`relative rounded-[2rem] overflow-hidden cursor-pointer bg-[#111] border transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] flex flex-col justify-center items-center ${isActive
-                  ? 'flex-[6] md:flex-[5] border-[#4468b8]/50 shadow-[0_0_40px_rgba(68,104,184,0.3)]'
-                  : 'flex-[1] border-white/5 opacity-60 hover:opacity-100 hover:flex-[1.2]'
+                ? 'flex-[6] md:flex-[5] border-[#4468b8]/50 shadow-[0_0_40px_rgba(68,104,184,0.3)]'
+                : 'flex-[1] border-white/5 opacity-60 hover:opacity-100 hover:flex-[1.2]'
                 }`}
             >
               {/* Blurred Background Image */}
               <div className="absolute inset-0 z-0">
                 <img
                   src={cert.image}
-                  alt="bg"
+                  alt={`Fond flou - ${cert.title}`}
+                  loading="lazy"
+                  width="1000"
+                  height="700"
                   className={`w-full h-full object-cover transition-all duration-[800ms] ${isActive ? 'scale-110 blur-xl opacity-30' : 'blur-sm opacity-40 grayscale group-hover:grayscale-0'}`}
                 />
                 <div className={`absolute inset-0 bg-gradient-to-t ${cert.color} opacity-20 mix-blend-overlay`}></div>
@@ -70,7 +73,10 @@ export default function Certifications() {
                 <div className="flex-1 w-full flex items-center justify-center my-4 overflow-hidden rounded-xl bg-black/40 border border-white/5 shadow-inner">
                   <img
                     src={cert.image}
-                    alt={cert.title}
+                    alt={`Certificat officiel ${cert.title} par ${cert.issuer}`}
+                    loading="lazy"
+                    width="1754"
+                    height="242"
                     className="max-w-full max-h-full object-contain p-2 md:p-4 drop-shadow-2xl"
                   />
                 </div>

@@ -50,13 +50,13 @@ function Footer() {
                         </ul>
 
                         <div className="flex gap-4">
-                            <a href="https://www.linkedin.com/in/jeremie-harding/" target="_blank" rel="noopener noreferrer" className="size-12 rounded-full border border-white/10 bg-[#444056]/30 flex items-center justify-center hover:bg-[#4468b8] hover:border-transparent hover:text-white transition-all cursor-pointer text-sm text-[#dfd7c1]">
+                            <a href="https://www.linkedin.com/in/jeremie-harding/" target="_blank" rel="noopener noreferrer" className="size-12 rounded-full border border-white/10 bg-[#444056]/30 flex items-center justify-center hover:bg-[#4468b8] hover:border-transparent hover:text-white transition-all cursor-pointer text-sm text-[#dfd7c1]" aria-label="Visiter mon profil LinkedIn">
                                 in
                             </a>
-                            <a href="https://github.com/Harding10" target="_blank" rel="noopener noreferrer" className="size-12 rounded-full border border-white/10 bg-[#444056]/30 flex items-center justify-center hover:bg-white hover:text-black hover:border-transparent transition-all cursor-pointer text-sm text-[#dfd7c1] font-bold">
+                            <a href="https://github.com/Harding10" target="_blank" rel="noopener noreferrer" className="size-12 rounded-full border border-white/10 bg-[#444056]/30 flex items-center justify-center hover:bg-white hover:text-black hover:border-transparent transition-all cursor-pointer text-sm text-[#dfd7c1] font-bold" aria-label="Visiter mon profil GitHub">
                                 GH
                             </a>
-                            <a href="#" className="size-12 rounded-full border border-white/10 bg-[#444056]/30 flex items-center justify-center hover:bg-[#8d6b5d] hover:border-transparent hover:text-white transition-all cursor-pointer text-sm text-[#dfd7c1]">
+                            <a href="#" className="size-12 rounded-full border border-white/10 bg-[#444056]/30 flex items-center justify-center hover:bg-[#8d6b5d] hover:border-transparent hover:text-white transition-all cursor-pointer text-sm text-[#dfd7c1]" aria-label="Me suivre sur X (Twitter)">
                                 X
                             </a>
                         </div>
