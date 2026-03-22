@@ -72,7 +72,7 @@ export default function Contact() {
     ];
 
     return (
-        <section className="min-h-screen bg-[#050505] relative overflow-hidden pt-24 pb-20 px-4 sm:px-8">
+        <section className="min-h-screen bg-[#050505] relative overflow-hidden pt-32 pb-16 px-6 sm:px-12 md:px-24">
             {/* Background Effects */}
             <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#4468b8]/10 rounded-full blur-[100px] pointer-events-none"></div>
             <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#8d6b5d]/10 rounded-full blur-[100px] pointer-events-none"></div>
@@ -85,7 +85,7 @@ export default function Contact() {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                    <h1 className="text-4xl md:text-6xl font-black text-white mb-6 uppercase tracking-tighter">
                         Contactez-<span className="text-[#4468b8]">Moi</span>
                     </h1>
                     <p className="text-[#cbd5e1] max-w-2xl mx-auto text-lg leading-relaxed">
@@ -113,8 +113,8 @@ export default function Contact() {
                                     <div className="relative z-10">{info.icon}</div>
                                 </div>
                                 <div>
-                                    <h3 className="text-sm uppercase tracking-widest text-[#cbd5e1] font-medium mb-1 group-hover:text-white transition-colors">{info.title}</h3>
-                                    <p className="text-[#dfd7c1] font-medium text-lg">{info.value}</p>
+                                    <h3 className="text-xs uppercase tracking-widest text-gray-500 font-bold mb-1 group-hover:text-white transition-colors">{info.title}</h3>
+                                    <p className="text-[#dfd7c1] font-bold text-sm md:text-lg break-all">{info.value}</p>
                                 </div>
                             </motion.a>
                         ))}
@@ -125,7 +125,8 @@ export default function Contact() {
                             <div className="flex gap-4">
                                 {[
                                     { icon: "github", label: "GitHub", link: "https://github.com/Harding10" },
-                                    { icon: "linkedin", label: "LinkedIn", link: "https://www.linkedin.com/in/jeremie-harding/" }
+                                    { icon: "linkedin", label: "LinkedIn", link: "https://www.linkedin.com/in/jeremie-harding/" },
+                                    { icon: "tiktok", label: "TikTok", link: "https://www.tiktok.com/@disponible_a_minuit?_r=1&_t=ZS-94rHpZre4Kfet" }
                                 ].map((social, index) => (
                                     <a key={index} href={social.link} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-[#dfd7c1] hover:bg-[#4468b8] hover:border-transparent hover:text-white transition-all duration-300 transform hover:-translate-y-1">
                                         <span className="sr-only">{social.label}</span>
@@ -134,6 +135,11 @@ export default function Contact() {
                                         )}
                                         {social.icon === 'linkedin' && (
                                             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fillRule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clipRule="evenodd" /></svg>
+                                        )}
+                                        {social.icon === 'tiktok' && (
+                                            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.17-2.89-.6-4.13-1.47V18.77a6.738 6.738 0 0 1-2.92 5.51c-1.34.87-3.05 1.17-2.91 1.25a6.673 6.673 0 0 1-3.6.45 6.711 6.711 0 0 1-5.13-4.5c-.75-2.22-.29-4.73 1.25-6.49a6.678 6.678 0 0 1 5.23-2.61c.14 0 .28 0 .42.01v4.09l-.17-.03a2.641 2.641 0 0 0-2.27 1.34c-.51.87-.51 2.02.01 2.89.51.87 1.58 1.41 2.58 1.29.98-.12 1.84-.96 2.03-1.93.07-.35.07-.71.07-1.07V0z"/>
+                                            </svg>
                                         )}
                                     </a>
                                 ))}
@@ -146,7 +152,7 @@ export default function Contact() {
                         initial={{ opacity: 0, x: 30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: 0.4 }}
-                        className="lg:col-span-3 bg-[#111111] border border-white/5 rounded-3xl p-8 md:p-12 relative overflow-hidden"
+                        className="lg:col-span-3 bg-[#111111] border border-white/5 rounded-3xl p-6 md:p-12 relative overflow-hidden"
                     >
                         {/* Glow subtil sur le coté */}
                         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-b from-[#4468b8]/5 to-transparent rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>

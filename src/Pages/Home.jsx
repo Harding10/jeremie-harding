@@ -6,7 +6,7 @@ import Certifications from '../components/sections/Certifications';
 
 export default function Home() {
     return (
-        <div className="flex-grow flex flex-col w-full relative overflow-x-hidden">
+        <div className="grow flex flex-col w-full relative overflow-x-hidden">
             <div className="min-h-screen flex items-center justify-center pt-24 pb-12 relative">
                 <Hero />
             </div>
@@ -16,15 +16,15 @@ export default function Home() {
                 <About />
             </div>
 
-                {/* SECTION SKILLS */}
-                 <div className="w-full flex items-center justify-center py-12">
-                    <Skills />
-                </div> 
+            {/* SECTION SKILLS */}
+            <div className="w-full flex items-center justify-center py-12">
+                <Skills />
+            </div>
 
-                {/* SECTION CERTIFICATIONS */}
-                    <div className="w-full flex items-center justify-center py-12">
-                        <Certifications />
-                    </div>
+            {/* SECTION CERTIFICATIONS */}
+            <div className="w-full flex items-center justify-center py-12">
+                <Certifications />
+            </div>
         </div>
     );
 }

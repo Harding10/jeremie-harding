@@ -59,7 +59,11 @@ function Footer() {
                             <a href="#" className="size-12 rounded-full border border-white/10 bg-[#444056]/30 flex items-center justify-center hover:bg-[#8d6b5d] hover:border-transparent hover:text-white transition-all cursor-pointer text-sm text-[#dfd7c1]" aria-label="Me suivre sur X (Twitter)">
                                 X
                             </a>
+                            <a href="https://www.tiktok.com/@disponible_a_minuit?_r=1&_t=ZS-94rHpZre4Kfet" target="_blank" rel="noopener noreferrer" className="size-12 rounded-full border border-white/10 bg-[#444056]/30 flex items-center justify-center hover:bg-[#ff0050] hover:border-transparent hover:text-white transition-all cursor-pointer text-sm font-black text-[#dfd7c1]" aria-label="Me suivre sur TikTok">
+                                TIK
+                            </a>
                         </div>
+
                     </div>
                 </div>
             </div>

@@ -1,12 +1,5 @@
-// Importations des vidéos
-import apiVid from '../assets/video/Api.webm';
-import appleStoreVid from '../assets/video/applestore.webm';
-import barreVid from '../assets/video/barre-autio.mp4';
-import crudLaravelVid from '../assets/video/crub_laravel.webm';
-import ghostechVid from '../assets/video/GHOSTECH .webm';
-import kivipVid from '../assets/video/Kivip.mp4';
-import pikassoVid from '../assets/video/pikasso.webm';
-import rapidfyVid from '../assets/video/RapIdfy.mp4';
+import dataImage from '../assets/Data_IA/image.png';
+import dataResto from '../assets/Data_IA/restaurant.png';
 
 export const projectsData = [
     {
@@ -15,7 +8,7 @@ export const projectsData = [
         category: "dev_web",
         description: "Plateforme e-commerce.",
         tags: ["Firebase", "Tailwind"],
-        video: kivipVid,
+        video: "https://youtu.be/PLS05cVjT4A", 
         link: "https://kivip.vercel.app/"
     },
     {
@@ -24,7 +17,7 @@ export const projectsData = [
         category: "dev_web",
         description: "Une plateforme de formation technologique intuitive permettant de consulter des programmes complets et de s'inscrire via un processus de paiement simplifié par Wave Business sans L'api wave .",
         tags: ["React", "Firebase"],
-        video: ghostechVid,
+        video: "https://youtu.be/SuUQgandubo",
         link: "#"
     },
     {
@@ -34,7 +27,7 @@ export const projectsData = [
         // category: "Mobile",
         description: "Mini-clone de appstore Avec ma touche personnelle.",
         tags: ["React"],
-        video: appleStoreVid, 
+        video: "https://youtu.be/3qv-97raeJ8", 
         link: "https://appelstore.vercel.app"
     },
     {
@@ -43,7 +36,7 @@ export const projectsData = [
         category: "Api",
         description: "API RESTful Laravel pour la gestion des données  avec authentification JWT, gestion de rôles et documentation complète pour intégrations tierces.",
         tags: [ "Postman","Laravel", "MySQL"],
-        video: apiVid,
+        video: "https://youtu.be/GansyIZqKP0", 
         link: "https://github.com/Harding10/api-laravel-"
     },
     {
@@ -52,34 +45,38 @@ export const projectsData = [
         category: "Arduino",
         description: "Contrôle d'accès intelligent via capteurs de distance et un servomoteur.",
         tags: ["Arduino", "C++"],
-        video: barreVid,
+        video: "https://youtu.be/BAX461xgvZ8",
         link: "https://github.com/Harding10/barre-automatique"
     },
+
     {
         id: 6,
-        title: "RapIdfy",
-        category: "dev_web",
-        description: "Testeur de vitesse de frappe interactif.",
-        tags: ["JS", "CSS Animation"],
-        video: rapidfyVid,
-        link: "https://harding10.github.io/rapidfy.github.com/"
-    },
-    {
-        id: 7,
         title: "Pikasso Design",
         category: "Figma",
         description: "Design UI/UX d'une application de surveillance agricole intelligente avec tableau de bord de monitoring d'humidité.",
         tags: ["UI/UX", "Prototyping"],
-        video: pikassoVid,
+        video: "https://youtu.be/QQlRc_1Qm6A", 
         link: "https://www.figma.com/design/t6PkSvhOOOjnIKR3gMxhTO/Untitled?node-id=0-1&p=f&t=3w83vnMOsjU5XK22-0"
     },
     {
+        id: 7,
+        title: "Analyse de Données",
+        category: "Data",
+        description: " dataset du Titanic.",
+        tags: ["Python", "Pandas", "Numpy", "Matplotlib", "Seaborn"],
+        video: "#", 
+        image: dataImage, 
+        link: "https://www.linkedin.com/posts/jeremie-harding_datascience-python-machinelearning-activity-7424207634414645248-4Tm2?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFT-1p0Bea6kIleZY1PXebwmhebh2Wt80j8" 
+    },
+    {
         id: 8,
-        title: "CRUD Laravel Expert",
-        category: "dev_web",
-        description: "Système de gestion de contenu avec authentification sécurisée.",
-        tags: ["PHP", "Laravel", "Mysql"],
-        video: crudLaravelVid,
-        link: "https://github.com/Harding10/crub_laravel"
-    }
+        title: "Analyse de Données",
+        category: "Data",
+        description: "  Optimiser la stratégie d'un restaurant grâce aux statistiques.",
+        tags: ["Python", "Pandas", "Numpy", "Matplotlib", "Seaborn","Scipy.stats"],
+        video: "#", 
+        image: dataResto, 
+        link: "https://www.linkedin.com/posts/jeremie-harding_datascience-python-dataanalysis-activity-7435164105059160065-2uCu?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFT-1p0Bea6kIleZY1PXebwmhebh2Wt80j8" 
+    },
+    
 ];

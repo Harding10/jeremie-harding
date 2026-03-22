@@ -1,37 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import InstagramGallery from '../components/sections/instagram_gallery';
+import Canva from '../components/sections/Canva';
+import { getYoutubeId, getYoutubeEmbedUrl } from '../utils/youtube';
 
-import meedeo from '../assets/glry/meedeo.mp4';
-import meedeooo from '../assets/glry/meedeooo.mp4';
-import meeee11111 from '../assets/glry/meeee11111.mp4';
-// Gardons quelques vidéos de projets significatives si besoin, ou on remplace tout.
-// Le client demande d'utiliser les fichiers dans src/assets/glry.
-
-
-// Fonction unitaire pour détecter si un lien est une vidéo YouTube et extraire son ID
-const getYoutubeId = (url) => {
-    // Si c'est un lien local importé, ce n'est pas une URL string classique au format youtube
-    if (typeof url !== 'string') return null;
-    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
-    const match = url.match(regExp);
-    return (match && match[2].length === 11) ? match[2] : null;
-};
-
-// Tableau avec vos vidéos locales ajoutées
+// Tableau avec vos vidéos (URLs YouTube)
 const galleryItems = [
     {
         id: 1,
-        url: meedeo,
+        url: "https://youtube.com/shorts/X-U1IpT2K78?feature=share",
         title: 'Session Focus'
     },
     {
         id: 2,
-        url: meedeooo,
+        url: "https://youtube.com/shorts/uyDgJTrrwhE?feature=share",
         title: 'Project Demo'
     },
     {
         id: 3,
-        url: meeee11111,
+        url: "https://youtu.be/nT4KbtG11sA",
         title: 'Tech Overview'
     }
 ];
@@ -61,9 +47,7 @@ export default function Gallery() {
 
     // Helper pour générer l'Iframe YouTube
     const renderYoutubeIframe = (url, isModal = false) => {
-        const videoId = getYoutubeId(url);
-        // Paramètres pour l'Iframe : Autoplay actif en modal, muet en carrousel
-        const embedUrl = `https://www.youtube.com/embed/${videoId}?rel=0&showinfo=0${isModal ? '&autoplay=1' : '&autoplay=1&mute=1&controls=0'}`;
+        const embedUrl = getYoutubeEmbedUrl(url, isModal);
 
         return (
             <iframe
@@ -76,6 +60,7 @@ export default function Gallery() {
             ></iframe>
         );
     };
+
 
     return (
         <main className="min-h-screen bg-[#050505] pt-32 pb-20 overflow-hidden relative font-sans">
@@ -237,6 +222,9 @@ export default function Gallery() {
 
             {/* INTEGRATION DE LA GALERIE INSTAGRAM EN DESSOUS DES VIDEOS */}
             <InstagramGallery />
+
+            {/* SECTION CANVA */}
+            <Canva />
 
             {/* Propriétés CSS magiques pour la 3D et les animations de base */}
             <style>{`

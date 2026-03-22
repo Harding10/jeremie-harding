@@ -1,6 +1,10 @@
 import React from 'react';
+import { getYoutubeId, getYoutubeEmbedUrl } from '../utils/youtube';
 
 export default function ProjectCard({ project }) {
+    const isYoutube = getYoutubeId(project.video) !== null;
+    const embedUrl = isYoutube ? getYoutubeEmbedUrl(project.video, false) : null;
+
     return (
         <a
             href={project.link}
@@ -8,16 +12,39 @@ export default function ProjectCard({ project }) {
             rel="noopener noreferrer"
             className="group relative block overflow-hidden rounded-2xl bg-[#444056]/30 border border-white/5 backdrop-blur-sm transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(68,104,184,0.3)] hover:border-[#4468b8]/50"
         >
-            {/* Vidéo du projet */}
+            {/* Média du projet (Vidéo ou Image) */}
             <div className="relative aspect-video w-full overflow-hidden bg-black/50">
-                <video
-                    src={project.video}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="h-full w-full object-cover opacity-80 transition-opacity duration-500 group-hover:opacity-100"
-                />
+                {project.video && project.video !== "#" ? (
+                    isYoutube ? (
+                        <iframe
+                            src={embedUrl}
+                            title={project.title}
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            className="h-full w-full object-cover opacity-80 transition-opacity duration-500 group-hover:opacity-100 pointer-events-none"
+                        ></iframe>
+                    ) : (
+                        <video
+                            src={project.video}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="h-full w-full object-cover opacity-80 transition-opacity duration-500 group-hover:opacity-100"
+                        />
+                    )
+                ) : project.image ? (
+                    <img 
+                        src={project.image} 
+                        alt={project.title} 
+                        className="h-full w-full object-cover opacity-80 transition-opacity duration-500 group-hover:opacity-100"
+                    />
+                ) : (
+                    <div className="h-full w-full flex items-center justify-center bg-dark-gray/20">
+                        <span className="text-gray-500 text-xs uppercase tracking-widest font-bold">Image ou Vidéo à venir</span>
+                    </div>
+                )}
+
 
                 {/* Overlay gradient pour la lisibilité */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-black/20 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-60"></div>

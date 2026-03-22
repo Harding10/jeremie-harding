@@ -8,6 +8,13 @@ import certificationsList from '../../constants/certificationsList';
 
 export default function Certifications() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const openLightbox = (img) => {
+    setSelectedImage(img);
+    setIsModalOpen(true);
+  };
 
   return (
     <section id="certifications" className="relative w-full max-w-7xl mx-auto px-6 py-24 lg:py-32 bg-[#0a0a0a]">
@@ -22,7 +29,7 @@ export default function Certifications() {
           Mes <span className="text-transparent" style={{ WebkitTextStroke: '2px #4468b8' }}>Certificats</span>
         </h3>
         <p className="max-w-2xl text-[#cbd5e1] font-light text-sm md:text-base mt-2">
-          Découvrez la collection de mes attestations, reflétat mon engagement dans une veille technologique constante. Cliquez sur une carte pour la déployer.
+          Découvrez la collection de mes attestations, reflétat mon engagement dans une veille technologique constante. Cliquez sur une carte pour la déployer et sur l'image pour l'agrandir.
         </p>
       </div>
 
@@ -70,15 +77,20 @@ export default function Certifications() {
                 </div>
 
                 {/* Certificate Image Centered */}
-                <div className="flex-1 w-full flex items-center justify-center my-4 overflow-hidden rounded-xl bg-black/40 border border-white/5 shadow-inner">
+                <div 
+                  onClick={(e) => { e.stopPropagation(); openLightbox(cert.image); }}
+                  className="flex-1 w-full flex items-center justify-center my-4 overflow-hidden rounded-xl bg-black/40 border border-white/5 shadow-inner cursor-zoom-in group/img"
+                >
                   <img
                     src={cert.image}
                     alt={`Certificat officiel ${cert.title} par ${cert.issuer}`}
                     loading="lazy"
                     width="1754"
                     height="242"
-                    className="max-w-full max-h-full object-contain p-2 md:p-4 drop-shadow-2xl"
+                    className="max-w-full max-h-full object-contain p-2 md:p-4 drop-shadow-2xl transition-transform duration-500 group-hover/img:scale-105"
                   />
+                  {/* Overlay hover subtil */}
+                  <div className="absolute inset-0 bg-[#4468b8]/10 opacity-0 group-hover/img:opacity-100 transition-opacity pointer-events-none"></div>
                 </div>
 
                 {/* Footer Title */}
@@ -100,6 +112,47 @@ export default function Certifications() {
           );
         })}
       </div>
+
+      {/* LIGHTBOX MODAL */}
+      {isModalOpen && (
+        <div 
+          className="fixed inset-0 z-[999] flex items-center justify-center bg-black/95 backdrop-blur-2xl p-4 md:p-12 animate-fade-in"
+          onClick={() => setIsModalOpen(false)}
+        >
+          {/* Fermeture */}
+          <button 
+            className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors p-2 z-[1001]"
+            onClick={() => setIsModalOpen(false)}
+          >
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          {/* Image grand format */}
+          <div 
+            className="relative max-w-5xl w-full max-h-full flex items-center justify-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img 
+              src={selectedImage} 
+              alt="Certificat Agrandi" 
+              className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl border border-white/10"
+            />
+          </div>
+        </div>
+      )}
+
+      <style>{`
+        @keyframes fadeIn {
+          from { opacity: 0; transform: scale(0.95); }
+          to { opacity: 1; transform: scale(1); }
+        }
+        .animate-fade-in {
+          animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+      `}</style>
+
 
     </section>
   );

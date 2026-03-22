@@ -14,6 +14,7 @@ import firebaseIcon from '../../assets/icon/firebase.png';
 import pythonIcon from '../../assets/icon/python-original.svg';
 
 import figmaIcon from '../../assets/icon/Figma.png';
+import canvaIcon from '../../assets/icon/canva.png';
 import dockerIcon from '../../assets/icon/docker-original.svg';
 import gitIcon from '../../assets/icon/git.svg';
 import postmanIcon from '../../assets/icon/postman.png';
@@ -67,11 +68,12 @@ const SkillCarousel = ({ title, icons }) => (
         </div>
     </div>
 );
+{/* logo des competance utiliser */}
 
 export default function Skills() {
     const frontendIcons = [htmlIcon, jsIcon, reactIcon, tailwindIcon, tsIcon];
     const backendIcons = [laravelIcon, sqlIcon, mysqlIcon, firebaseIcon, pythonIcon];
-    const toolsIcons = [gitIcon, dockerIcon, postmanIcon, figmaIcon, vercelIcon];
+    const toolsIcons = [gitIcon, dockerIcon, postmanIcon, figmaIcon, canvaIcon, vercelIcon];
 
     return (
         <section id="skills" className="relative w-full max-w-7xl mx-auto px-6 py-24 lg:py-32 overflow-hidden">

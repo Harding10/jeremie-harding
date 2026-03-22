@@ -7,6 +7,10 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-
   ],
+  server: {
+    allowedHosts: [
+      'dirk-unferocious-heftily.ngrok-free.dev'
+    ]
+  }
 })
