@@ -7,7 +7,7 @@ import canvaList from '../constants/canvaList';
 export default function Projet() {
     const [activeTab, setActiveTab] = useState('Tous');
 
-    const tabs = ['Tous', 'dev_web', 'Mobile', 'Api', 'Data', 'Arduino', 'Figma', 'Canva'];
+    const tabs = ['Tous', 'dev_web','Data', 'Mobile', 'Api','Canva', 'Arduino', 'Figma'];
 
     const filteredProjects = useMemo(() => {
         return activeTab === 'Tous' 
