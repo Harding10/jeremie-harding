@@ -61,7 +61,7 @@ export default function Hero() {
 
                     <div className="flex flex-col sm:flex-row gap-4 sm:gap-8">
                         <button
-                            onClick={() => navigate('/Projet')}
+                            onClick={() => navigate('/Projets')}
                             className="w-full sm:w-auto px-10 py-4 bg-[#dfd7c1] text-black font-extrabold rounded-sm hover:bg-white transition-all transform hover:-translate-x-1 hover:-translate-y-1 shadow-[8px_8px_0px_#4468b8] active:shadow-none active:translate-x-1 active:translate-y-1"
                         >
                             MES PROJETS
